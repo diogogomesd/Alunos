@@ -17,6 +17,9 @@ public class Aluno {
     //construtor do objeto
     public Aluno(){}
 
+    //getters e setters
+    //getters serve para recuperar os dados inseridos nos atributos
+    //setters serve para inserir dados nos atributos
     public String getNome() {
         return nome;
     }
