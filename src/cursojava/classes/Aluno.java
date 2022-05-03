@@ -1,5 +1,9 @@
 package cursojava.classes;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
 //classe que representa o aluno
 public class Aluno {
     //atributos do aluno
@@ -13,6 +17,16 @@ public class Aluno {
     private String dataMatricula;
     private String nomeEscola;
     private String serieMatriculado;
+
+     private List<Disciplina> disciplinas = new ArrayList<Disciplina>();
+
+    public List<Disciplina> getDisciplinas() {
+        return disciplinas;
+    }
+
+    public void setDisciplinas(List<Disciplina> disciplinas) {
+        this.disciplinas = disciplinas;
+    }
 
     //construtor do objeto
     public Aluno(){}
@@ -99,4 +113,31 @@ public class Aluno {
     public void setSerieMatriculado(String serieMatriculado) {
         this.serieMatriculado = serieMatriculado;
     }
+
+    //método que retorna nota do aluno
+    public double getMediaNota(){
+        return 0;
+    }
+    //método que retorna true ou false para aluno aprovado ou reprovado
+    public boolean getAlunoAprovado(){
+        double media = this.getMediaNota();
+        if(media >= 70){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    //método que retorna a String se o aluno está aprovado ou reprovado
+    public String getAlunoAprovado2(){
+        double media = this.getMediaNota();
+        if(media >= 70){
+            return "Aluno está Aprovado";
+        }
+        else {
+            return "Aluno está Reprovado";
+        }
+    }
+
+
 }

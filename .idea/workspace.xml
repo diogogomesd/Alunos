@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44ba7638-172f-47ad-9d04-9bd039c673af" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/cursojava/classes/Disciplina.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cursojava/classes/Aluno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cursojava/classes/Aluno.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cursojava/executavel/PrimeiraClasse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cursojava/executavel/PrimeiraClasse.java" afterDir="false" />
@@ -33,12 +34,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="PrimeiraClasse" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="cursojava.executavel.PrimeiraClasse" />
