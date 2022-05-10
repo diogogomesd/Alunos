@@ -116,7 +116,11 @@ public class Aluno {
 
     //método que retorna nota do aluno
     public double getMediaNota(){
-        return 0;
+        double somaNotas = 0.0;
+        for (Disciplina disciplina : disciplinas) {
+            somaNotas += disciplina.getNota();
+        }
+        return somaNotas/disciplinas.size();
     }
     //método que retorna true ou false para aluno aprovado ou reprovado
     public boolean getAlunoAprovado(){
@@ -131,10 +135,14 @@ public class Aluno {
     //método que retorna a String se o aluno está aprovado ou reprovado
     public String getAlunoAprovado2(){
         double media = this.getMediaNota();
-        if(media >= 70){
-            return "Aluno está Aprovado";
-        }
-        else {
+        if(media >= 50){
+            if (media >= 70) {
+                return "Aluno está Aprovado";
+            } else {
+                return "Aluno em Recuperação";
+            }
+                
+            } else {
             return "Aluno está Reprovado";
         }
     }
