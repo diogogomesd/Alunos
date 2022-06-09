@@ -7,15 +7,8 @@ import java.util.List;
 import java.util.Objects;
 
 //classe que representa o aluno
-public class Aluno {
-    //atributos do aluno
-    private String nome;
-    private int idade;
-    private String dataNascimento;
-    private String numeroRg;
-    private String numeroCpf;
-    private String nomeMae;
-    private String nomePai;
+public class Aluno extends Pessoa{
+
     private String dataMatricula;
     private String nomeEscola;
     private String serieMatriculado;
@@ -37,59 +30,59 @@ public class Aluno {
     //getters serve para recuperar os dados inseridos nos atributos
     //setters serve para inserir dados nos atributos
     public String getNome() {
-        return nome;
+        return super.nome;
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        super.nome = nome;
     }
 
     public int getIdade() {
-        return idade;
+        return super.idade;
     }
 
     public void setIdade(int idade) {
-        this.idade = idade;
+        super.idade = idade;
     }
 
     public String getDataNascimento() {
-        return dataNascimento;
+        return super.dataNascimento;
     }
 
     public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
+        super.dataNascimento = dataNascimento;
     }
 
     public String getNumeroRg() {
-        return numeroRg;
+        return super.numeroRg;
     }
 
     public void setNumeroRg(String numeroRg) {
-        this.numeroRg = numeroRg;
+        super.numeroRg = numeroRg;
     }
 
     public String getNumeroCpf() {
-        return numeroCpf;
+        return super.numeroCpf;
     }
 
     public void setNumeroCpf(String numeroCpf) {
-        this.numeroCpf = numeroCpf;
+        super.numeroCpf = numeroCpf;
     }
 
     public String getNomeMae() {
-        return nomeMae;
+        return super.nomeMae;
     }
 
     public void setNomeMae(String nomeMae) {
-        this.nomeMae = nomeMae;
+        super.nomeMae = nomeMae;
     }
 
     public String getNomePai() {
-        return nomePai;
+        return super.nomePai;
     }
 
     public void setNomePai(String nomePai) {
-        this.nomePai = nomePai;
+        super.nomePai = nomePai;
     }
 
     public String getDataMatricula() {
@@ -149,5 +142,40 @@ public class Aluno {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Aluno{" +
+                "dataMatricula='" + dataMatricula + '\'' +
+                ", nomeEscola='" + nomeEscola + '\'' +
+                ", serieMatriculado='" + serieMatriculado + '\'' +
+                ", disciplinas=" + disciplinas +
+                '}';
+    }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Aluno aluno = (Aluno) o;
+        return dataMatricula.equals(aluno.dataMatricula) && nomeEscola.equals(aluno.nomeEscola) && serieMatriculado.equals(aluno.serieMatriculado) && disciplinas.equals(aluno.disciplinas);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(dataMatricula, nomeEscola, serieMatriculado, disciplinas);
+    }
+
+    @Override
+    public boolean pessoaMaiorIdade() {
+        return idade >= 21;
+    }
+
+    @Override
+    public boolean autenticar() {
+        return false;
+    }
+
+    public String msgMaiorIdade(){
+        return this.pessoaMaiorIdade() ? "oba vc é maior de idade " : "vixe vc é menor de idade";
+    }
 }
